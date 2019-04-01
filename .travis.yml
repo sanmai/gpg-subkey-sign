@@ -2,7 +2,7 @@
 language: bash
 
 before_script:
-  - gpg --recv-key 80F8B43E2F03D644
+  - curl https://github.com/sanmai.gpg | gpg --import
 
 script:
   - git log --show-signature -1 | grep -C20 'Good signature'
